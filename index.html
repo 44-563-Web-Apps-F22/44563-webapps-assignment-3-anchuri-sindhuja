@@ -88,6 +88,38 @@
                 
             </table>
 
+            <h6>Code</h6>
+
+
+
+            <h6>shuffle-children</h6>
+    
+    
+    
+           <link href=" https://css-tricks.com/snippets/jquery/shuffle-children/ ">
+    
+    
+    
+           <pre>
+    
+            $.fn.shuffleChildren = function() {
+                $.each(this.get(), function(index, el) {
+                    var $el = $(el);
+                    var $find = $el.children();
+            
+                    $find.sort(function() {
+                        return 0.5 - Math.random();
+                    });
+            
+                    $el.empty();
+                    $find.appendTo($el);
+                });
+            };
+    
+    
+            </pre>
+            
+
               
     </body>
 
